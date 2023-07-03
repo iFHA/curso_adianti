@@ -69,6 +69,10 @@
                 <icon>fa:circle fa-fw</icon>
                 <action>ModalWindowView</action>
             </menuitem>
+            <menuitem label='Template Cortina'>
+                <icon>fa:circle fa-fw</icon>
+                <action>TemplateSidebarView</action>
+            </menuitem>
         </menu>
     </menuitem>
 </menu>
