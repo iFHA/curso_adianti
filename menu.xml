@@ -89,6 +89,10 @@
                 <icon>fa:circle fa-fw</icon>
                 <action>ScrollView</action>
             </menuitem>
+            <menuitem label='NotebookView'>
+                <icon>fa:circle fa-fw</icon>
+                <action>NotebookView</action>
+            </menuitem>
         </menu>
     </menuitem>
 </menu>
