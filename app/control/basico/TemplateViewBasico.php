@@ -11,6 +11,7 @@ class TemplateViewBasico extends TPage {
         try {
             $html = new THtmlRenderer('app/resources/template-basico.html');
             $html->enableSection('main', ['title' => 'titulo teste', 'content' => 'conteúdo teste']);
+            $html->enableSection('outros', ['title' => 'Outros', 'content' => 'conteúdo teste outros']);
             parent::add($html);
         } catch(Exception $e) {
             new TMessage('error', $e->getMessage());
