@@ -81,6 +81,10 @@
                 <icon>fa:circle fa-fw</icon>
                 <action>TableView</action>
             </menuitem>
+            <menuitem label='PanelGroup'>
+                <icon>fa:circle fa-fw</icon>
+                <action>PanelGroupView</action>
+            </menuitem>
         </menu>
     </menuitem>
 </menu>
