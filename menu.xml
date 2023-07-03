@@ -77,6 +77,10 @@
                 <icon>fa:circle fa-fw</icon>
                 <action>TemplateEmbeddedPdf</action>
             </menuitem>
+            <menuitem label='Table view'>
+                <icon>fa:circle fa-fw</icon>
+                <action>TableView</action>
+            </menuitem>
         </menu>
     </menuitem>
 </menu>
