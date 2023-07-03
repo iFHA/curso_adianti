@@ -37,4 +37,18 @@
             </menuitem>
         </menu>
     </menuitem>
+    <menuitem label='Básico'>
+        <icon>fa:cube fa-fw</icon>
+        <menu>
+            <menuitem label='Template Básico'>
+                <icon>fa:circle fa-fw</icon>
+                <action>TemplateViewBasico</action>
+            </menuitem>
+            
+            <menuitem label='Template com máscaras'>
+                <icon>fa:circle fa-fw</icon>
+                <action>TemplateViewMask</action>
+            </menuitem>
+        </menu>
+    </menuitem>
 </menu>
