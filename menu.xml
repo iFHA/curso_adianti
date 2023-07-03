@@ -85,6 +85,10 @@
                 <icon>fa:circle fa-fw</icon>
                 <action>PanelGroupView</action>
             </menuitem>
+            <menuitem label='ScrollView'>
+                <icon>fa:circle fa-fw</icon>
+                <action>ScrollView</action>
+            </menuitem>
         </menu>
     </menuitem>
 </menu>
