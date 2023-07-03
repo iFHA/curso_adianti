@@ -93,6 +93,10 @@
                 <icon>fa:circle fa-fw</icon>
                 <action>NotebookView</action>
             </menuitem>
+            <menuitem label='VBoxView'>
+                <icon>fa:circle fa-fw</icon>
+                <action>VBoxView</action>
+            </menuitem>
         </menu>
     </menuitem>
 </menu>
