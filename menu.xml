@@ -53,6 +53,10 @@
                 <icon>fa:circle fa-fw</icon>
                 <action>TemplateRepeat</action>
             </menuitem>
+            <menuitem label='Template com Breadcrumb'>
+                <icon>fa:circle fa-fw</icon>
+                <action>TemplateBreadcrumb</action>
+            </menuitem>
         </menu>
     </menuitem>
 </menu>
