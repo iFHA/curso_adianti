@@ -61,6 +61,10 @@
                 <icon>fa:circle fa-fw</icon>
                 <action>TemplateWindow</action>
             </menuitem>
+            <menuitem label='Template Janela Sob Demanda'>
+                <icon>fa:circle fa-fw</icon>
+                <action>TemplateWindowOnDemand</action>
+            </menuitem>
         </menu>
     </menuitem>
 </menu>
