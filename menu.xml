@@ -73,6 +73,10 @@
                 <icon>fa:circle fa-fw</icon>
                 <action>TemplateSidebarView</action>
             </menuitem>
+            <menuitem label='Embedded PDF'>
+                <icon>fa:circle fa-fw</icon>
+                <action>TemplateEmbeddedPdf</action>
+            </menuitem>
         </menu>
     </menuitem>
 </menu>
