@@ -65,6 +65,10 @@
                 <icon>fa:circle fa-fw</icon>
                 <action>TemplateWindowOnDemand</action>
             </menuitem>
+            <menuitem label='Template Janela Modal'>
+                <icon>fa:circle fa-fw</icon>
+                <action>ModalWindowView</action>
+            </menuitem>
         </menu>
     </menuitem>
 </menu>
