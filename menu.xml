@@ -49,6 +49,10 @@
                 <icon>fa:circle fa-fw</icon>
                 <action>TemplateViewMask</action>
             </menuitem>
+            <menuitem label='Template com repetição'>
+                <icon>fa:circle fa-fw</icon>
+                <action>TemplateRepeat</action>
+            </menuitem>
         </menu>
     </menuitem>
 </menu>
