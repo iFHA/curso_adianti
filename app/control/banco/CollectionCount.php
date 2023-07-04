@@ -14,23 +14,15 @@ class CollectionCount extends TPage {
 
         try {
             TTransaction::open('curso');
+            TTransaction::dump();
 
             $criteria = new TCriteria;
-            $criteria->setProperty("limit", 10);
-            $criteria->setProperty("offset", 20);
-            $criteria->setProperty("order", "nome");
+            $criteria->add(new TFilter('situacao', '=', 'Y'));
+            $criteria->add(new TFilter('genero', '=', 'F'));
 
             $repository = new TRepository('Cliente');
-            $clientes = $repository->load($criteria);
-            if($clientes) {
-                foreach($clientes as $cliente) {
-                    echo $cliente->id . 
-                    ' - ' . $cliente->nome . 
-                    ', Categoria: ' . $cliente->categoria->nome .
-                    ', Cidade: ' . $cliente->cidade->nome . '/' . $cliente->cidade->estado->nome.
-                    '<br>';
-                }
-            }
+            $repository->update(['telefone'=>'111 2222 3333'],$criteria);
+            
             TTransaction::close();
         } catch(Exception $e) {
             new TMessage('error', $e->getMessage());
