@@ -12,9 +12,11 @@ class ObjetoRelacionado extends TPage {
             TTransaction::dump();
             
             // $contatos = Cliente::find(1)->hasMany('Contato', 'cliente_id', 'id', 'tipo');
-            $contatos = Cliente::find(1)->filterMany('Contato')->where('tipo', '=', 'face')->load();
+            // $contatos = Cliente::find(1)->filterMany('Contato')->where('tipo', '=', 'face')->load();
+            // $habilidades = Cliente::find(1)->belongsToMany('Habilidade');
+            $habilidades = Cliente::find(1)->belongsToMany('Habilidade', 'ClienteHabilidade', 'cliente_id', 'habilidade_id');
             echo "<pre>";
-            print_r($contatos);
+            print_r($habilidades);
             echo "</pre>";
             TTransaction::close();
         } catch (Exception $e) {
