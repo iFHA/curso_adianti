@@ -22,11 +22,13 @@ class CollectionShortcuts extends TPage {
             // $clientes = Cliente::take(10)
             //                ->skip(20)
             //                ->load();
-            $clientes = Cliente::where("id", ">", "10")
-                           ->first();
-            echo "<pre>";
-            var_dump($clientes);
-            echo "</pre>";
+            // $clientes = Cliente::where("id", ">", "10")
+            //                ->first();
+            // echo "<pre>";
+            // var_dump($clientes);
+            // echo "</pre>";
+
+            Cliente::where('cidade_id', '=', 3)->set(['telefone', '11-22-33'])->update();
 
             TTransaction::close();
         } catch (Exception $e) {
