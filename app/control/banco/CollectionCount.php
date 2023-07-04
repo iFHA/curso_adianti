@@ -16,8 +16,9 @@ class CollectionCount extends TPage {
             TTransaction::open('curso');
 
             $criteria = new TCriteria;
-            $criteria->add(new TFilter('situacao', '=', 'Y'), TExpression::OR_OPERATOR);
-            $criteria->add(new TFilter('genero', '=', 'F'));
+            $criteria->setProperty("limit", 10);
+            $criteria->setProperty("offset", 20);
+            $criteria->setProperty("order", "nome");
 
             $repository = new TRepository('Cliente');
             $clientes = $repository->load($criteria);
