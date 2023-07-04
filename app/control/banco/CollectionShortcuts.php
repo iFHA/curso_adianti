@@ -15,9 +15,13 @@ class CollectionShortcuts extends TPage {
             // var_dump($clientes);
             // echo "</pre>";
 
-            $count = Cliente::where("situacao", "=", "Y")
-                            ->where("genero", "=", "F")->count();
-            echo $count;
+            $clientes = Cliente::where("situacao", "=", "Y")
+                           ->where("genero", "=", "F")
+                           ->orderBy("nome")
+                           ->load();
+            echo "<pre>";
+            var_dump($clientes);
+            echo "</pre>";
 
             TTransaction::close();
         } catch (Exception $e) {
