@@ -12,7 +12,9 @@ class CollectionAggregation extends TPage {
             TTransaction::dump();
 
             $total = Venda::sumBy("total");
-            echo $total;
+            echo "Total: $total<br>";
+            $count = Venda::count();
+            echo "Count: $count";
 
             TTransaction::close();
         } catch(Exception $e) {
