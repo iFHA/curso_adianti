@@ -11,15 +11,15 @@ class ObjectStore extends TPage {
         try {
             TTransaction::open('curso');
 
-            $produto = Produto::where('descricao', '=', 'teste')->get();
+            $produto = Produto::where('descricao', '=', 'teste2')->get();
             if(!$produto) {
-                $produto = new Produto;
-                $produto->descricao = 'teste';
-                $produto->estoque = 25;
-                $produto->preco_venda = 400;
-                $produto->unidade = 'kg';
-                $produto->local_foto = '';
-                $produto->store();
+                Produto::create([
+                    'descricao' => 'teste2',
+                    'estoque' => 25,
+                    'preco_venda' => 400,
+                    'unidade' => 'kg',
+                    'local_foto' => ''
+                ]);
             }
 
 
