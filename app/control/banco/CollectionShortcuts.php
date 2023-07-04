@@ -9,6 +9,7 @@ class CollectionShortcuts extends TPage {
         parent::__construct();
         try {
             TTransaction::open('curso');
+            TTransaction::dump();
             
             // $clientes = Cliente::all();
             // echo "<pre>";
@@ -28,7 +29,7 @@ class CollectionShortcuts extends TPage {
             // var_dump($clientes);
             // echo "</pre>";
 
-            Cliente::where('cidade_id', '=', 3)->set(['telefone', '11-22-33'])->update();
+            Cliente::where('cidade_id', '=', 3)->set('telefone', '11-22-33')->update();
 
             TTransaction::close();
         } catch (Exception $e) {
