@@ -97,6 +97,10 @@
                 <icon>fa:circle fa-fw</icon>
                 <action>VBoxView</action>
             </menuitem>
+            <menuitem label='DialogInputView'>
+                <icon>fa:circle fa-fw</icon>
+                <action>DialogInputView</action>
+            </menuitem>
         </menu>
     </menuitem>
 </menu>
