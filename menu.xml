@@ -101,6 +101,14 @@
                 <icon>fa:circle fa-fw</icon>
                 <action>DialogInputView</action>
             </menuitem>
+            <menuitem label='FormularioManual'>
+                <icon>fa:circle fa-fw</icon>
+                <action>FormularioManual</action>
+            </menuitem>
+            <menuitem label='FormularioBootstrap'>
+                <icon>fa:circle fa-fw</icon>
+                <action>FormularioBootstrap</action>
+            </menuitem>
         </menu>
     </menuitem>
 </menu>
