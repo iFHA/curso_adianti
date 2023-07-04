@@ -60,20 +60,21 @@ class FormularioBootstrap extends TPage {
 
         $dt_criacao->setValue(date('Y-m-d H:i'));
         $dt_expiracao->setValue(date('Y-m-d'));
+        $this->form->setFieldSizes('100%');
 
         $this->form->appendPage('Aba 1');
-        $this->form->addFields([new TLabel('Id')], [$id]);
-        $this->form->addFields([new TLabel('Descrição')], [$descricao]);
-        $this->form->addFields([new TLabel('Senha')], [$senha]);
-        $this->form->addFields([new TLabel('Dt. Criação')], [$dt_criacao], [new TLabel('Dt. Expiração')], [$dt_expiracao]);
-        $this->form->addFields([new TLabel('Valor')], [$valor], [new TLabel('Cor')], [$cor]);
-        $this->form->addFields([new TLabel('Peso')], [$peso], [new TLabel('Tipo')], [$tipo]);
+        $this->form->addFields([new TLabel('Id'), $id]);
+        $this->form->addFields([new TLabel('Descrição'), $descricao]);
+        $this->form->addFields([new TLabel('Senha'), $senha]);
+        $this->form->addFields([new TLabel('Dt. Criação'), $dt_criacao], [new TLabel('Dt. Expiração'), $dt_expiracao]);
+        $this->form->addFields([new TLabel('Valor'), $valor], [new TLabel('Cor'), $cor]);
+        $this->form->addFields([new TLabel('Peso'), $peso], [new TLabel('Tipo'), $tipo]);
 
         $this->form->appendPage('Page 2');
         $label = new TLabel("Divisória", '#6979BF', 12, 'bi');
         $label->style = 'text-align:left; border-bottom: 1px solid gray; width:100%';
         $this->form->addContent([$label]);
-        $this->form->addFields([new TLabel('Texto')], [$texto]);
+        $this->form->addFields([new TLabel('Texto'), $texto]);
 
         $this->form->addHeaderAction('Enviar', new TAction([$this, 'onSend']), 'fa:save');
 
