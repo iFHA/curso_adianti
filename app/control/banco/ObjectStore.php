@@ -11,11 +11,9 @@ class ObjectStore extends TPage {
 
         try {
             TTransaction::open('curso');
-            TTransaction::setLoggerFunction(function($log) {
-                echo $log . '<br>';
-            });
+            TTransaction::dump();
 
-            $produto = Produto::where('descricao', '=', 'teste2')->get();
+            $produto = Produto::where('descricao', '=', 'teste2')->first();
             if(!$produto) {
                 Produto::create([
                     'descricao' => 'teste2',
@@ -26,6 +24,7 @@ class ObjectStore extends TPage {
                 ]);
             }
 
+            $produto->delete();
 
             $produtos = Produto::all();
             foreach ($produtos as $produto) {
