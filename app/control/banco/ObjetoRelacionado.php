@@ -11,7 +11,8 @@ class ObjetoRelacionado extends TPage {
             TTransaction::open('curso');
             TTransaction::dump();
             
-            $contatos = Cliente::find(1)->hasMany('Contato', 'cliente_id', 'id', 'tipo');
+            // $contatos = Cliente::find(1)->hasMany('Contato', 'cliente_id', 'id', 'tipo');
+            $contatos = Cliente::find(1)->filterMany('Contato')->where('tipo', '=', 'face')->load();
             echo "<pre>";
             print_r($contatos);
             echo "</pre>";
