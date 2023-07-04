@@ -9,10 +9,16 @@ class CollectionShortcuts extends TPage {
         parent::__construct();
         try {
             TTransaction::open('curso');
-            $clientes = Cliente::all();
-            echo "<pre>";
-            var_dump($clientes);
-            echo "</pre>";
+            
+            // $clientes = Cliente::all();
+            // echo "<pre>";
+            // var_dump($clientes);
+            // echo "</pre>";
+
+            $count = Cliente::where("situacao", "=", "Y")
+                            ->where("genero", "=", "F")->count();
+            echo $count;
+
             TTransaction::close();
         } catch (Exception $e) {
             new TMessage('error', $e->getMessage());
