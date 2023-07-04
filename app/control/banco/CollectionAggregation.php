@@ -25,6 +25,10 @@ class CollectionAggregation extends TPage {
             echo "total: $total";
             $countIds = Venda::where("dt_venda", ">", "2015-03-12")->countDistinctBy("id");
             echo "countIds: $countIds";
+            $rows = Venda::where("dt_venda", ">", "2015-03-12")->groupBy("dt_venda")->maxBy("total");
+            echo "<strong>Máximo por data</strong><pre>";
+            var_dump($rows);
+            echo "</pre>";
 
 
             TTransaction::close();
