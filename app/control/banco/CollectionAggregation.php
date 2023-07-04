@@ -23,6 +23,8 @@ class CollectionAggregation extends TPage {
             echo "</pre>";
             $total = Venda::where("dt_venda", ">", "2015-03-12")->sumBy("total");
             echo "total: $total";
+            $countIds = Venda::where("dt_venda", ">", "2015-03-12")->countDistinctBy("id");
+            echo "countIds: $countIds";
 
 
             TTransaction::close();
