@@ -109,6 +109,10 @@
                 <icon>fa:circle fa-fw</icon>
                 <action>FormularioBootstrap</action>
             </menuitem>
+            <menuitem label='FormularioBootstrapColunas'>
+                <icon>fa:circle fa-fw</icon>
+                <action>FormularioBootstrapColunas</action>
+            </menuitem>
         </menu>
     </menuitem>
 </menu>
