@@ -2,6 +2,7 @@
 
 use Adianti\Control\TPage;
 use Adianti\Database\TTransaction;
+use Adianti\Log\TLoggerSTD;
 use Adianti\Widget\Dialog\TMessage;
 
 class ObjectStore extends TPage {
@@ -10,6 +11,7 @@ class ObjectStore extends TPage {
 
         try {
             TTransaction::open('curso');
+            TTransaction::setLogger(new TLoggerSTD());  
 
             $produto = Produto::where('descricao', '=', 'teste2')->get();
             if(!$produto) {
