@@ -29,8 +29,12 @@ class CollectionShortcuts extends TPage {
             // var_dump($clientes);
             // echo "</pre>";
 
-            Cliente::where('cidade_id', '=', 3)->set('telefone', '11-22-33')->update();
+            // Cliente::where('cidade_id', '=', 3)->set('telefone', '11-22-33')->update();
 
+            $clientes = Cliente::where("id", ">", "10")->getIndexedArray('id', 'nome');
+            echo "<pre>";
+            print_r($clientes);
+            echo "</pre>";
             TTransaction::close();
         } catch (Exception $e) {
             new TMessage('error', $e->getMessage());
