@@ -20,10 +20,16 @@ class CollectionCount extends TPage {
             $criteria->add(new TFilter('genero', '=', 'F'));
 
             $repository = new TRepository('Cliente');
-            $count = $repository->count($criteria);
-            
-            new TMessage('info', "$count registros encontrados");
-
+            $clientes = $repository->load($criteria);
+            if($clientes) {
+                foreach($clientes as $cliente) {
+                    echo $cliente->id . 
+                    ' - ' . $cliente->nome . 
+                    ', Categoria: ' . $cliente->categoria->nome .
+                    ', Cidade: ' . $cliente->cidade->nome . '/' . $cliente->cidade->estado->nome.
+                    '<br>';
+                }
+            }
             TTransaction::close();
         } catch(Exception $e) {
             new TMessage('error', $e->getMessage());
