@@ -15,6 +15,8 @@ class CollectionAggregation extends TPage {
             echo "Total: $total<br>";
             $count = Venda::count();
             echo "Count: $count";
+            $count = Venda::countDistinctBy("total");
+            echo "CountDistinctyByTotal: $count";
 
             TTransaction::close();
         } catch(Exception $e) {
