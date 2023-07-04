@@ -21,6 +21,8 @@ class CollectionAggregation extends TPage {
             echo "<pre>";
             var_dump($rows);
             echo "</pre>";
+            $total = Venda::where("dt_venda", ">", "2015-03-12")->sumBy("total");
+            echo "total: $total";
 
 
             TTransaction::close();
