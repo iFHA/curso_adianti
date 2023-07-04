@@ -17,6 +17,11 @@ class CollectionAggregation extends TPage {
             echo "Count: $count";
             $count = Venda::countDistinctBy("total");
             echo "CountDistinctyByTotal: $count";
+            $rows = Venda::groupBy("dt_venda, cliente_id")->sumBy("total");
+            echo "<pre>";
+            var_dump($rows);
+            echo "</pre>";
+
 
             TTransaction::close();
         } catch(Exception $e) {
