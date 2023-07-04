@@ -11,7 +11,7 @@ class ObjectStore extends TPage {
 
         try {
             TTransaction::open('curso');
-            TTransaction::setLogger(new TLoggerSTD());  
+            TTransaction::dump();
 
             $produto = Produto::where('descricao', '=', 'teste2')->get();
             if(!$produto) {
