@@ -15,9 +15,12 @@ class CollectionShortcuts extends TPage {
             // var_dump($clientes);
             // echo "</pre>";
 
-            $clientes = Cliente::where("situacao", "=", "Y")
-                           ->where("genero", "=", "F")
-                           ->orderBy("nome")
+            // $clientes = Cliente::where("situacao", "=", "Y")
+            //                ->where("genero", "=", "F")
+            //                ->orderBy("nome")
+            //                ->load();
+            $clientes = Cliente::take(10)
+                           ->skip(20)
                            ->load();
             echo "<pre>";
             var_dump($clientes);
